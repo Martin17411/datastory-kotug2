@@ -6,12 +6,6 @@ from PIL import Image
 
 st.set_page_config(page_title="Kotug datastory | CIEM 6302", layout="wide")
 
-def load_lottieurl(url):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
-
 mystyle = '''
     <style>
         p {
@@ -23,9 +17,7 @@ mystyle = '''
 st.markdown(mystyle, unsafe_allow_html=True)
 
 # ---- LOAD ASSETS ----
-lottie_team = load_lottieurl("https://lottie.host/3222fdf4-a2db-402c-8f80-890562c701a3/aOXHckBb8p.json")
 img_kotug_tug = Image.open("images/Kotug-tug.jpg")
-img_kotug_80s = Image.open("images/Kotug-80s.jpg")
 
 ########################################
 # ---- END of settings, START of content
